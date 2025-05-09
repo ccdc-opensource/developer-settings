@@ -5,20 +5,20 @@ version: 2
 registries:
   nuget-github:
     type: nuget-feed
-    url: https://nuget.pkg.github.com/ccdc-confidential/index.js
+    url: https://nuget.pkg.github.com/ccdc-confidential/index.json
     username: ${{ secrets.CCDC_GITHUB_NUGET_FEED_USER }}
     password: ${{ secrets.CCDC_GITHUB_NUGET_FEED_PAT }}
   nuget-public:
     type: nuget-feed
-    url: https://api.npm.org/v3/index.json
+    url: https://api.nuget.org/v3/index.json
 
   npm-github:
-    type: nuget-feed
+    type: npm-registry
     url: https://npm.pkg.github.com
     username: ${{ secrets.CCDC_GITHUB_NUGET_FEED_USER }}
     password: ${{ secrets.CCDC_GITHUB_NUGET_FEED_PAT }}
   npm-public:
-    type: nuget-feed
+    type: npm-registry
     url: https://registry.npmjs.org
 
 updates:
